@@ -16,9 +16,6 @@ public class ControlleurServlet extends HttpServlet {
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		String name = req.getParameter("name");
-		out.println("<html><head></head>");
-		out.println("<body>");
-		out.println("<h3>bONJOUR "+name+"</h3>");
-		out.println("</body></html>");
+		req.getRequestDispatcher("vue.jsp").forward(req, resp);
 	}
 }

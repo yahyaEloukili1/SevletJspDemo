@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%
+    		String name = (String) request.getParameter("name");
+    %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +10,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-		<h2>Hello from JSP</h2>
+		<h2>Hello <%= name %></h2>
 </body>
 </html>

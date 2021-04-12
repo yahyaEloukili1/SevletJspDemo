@@ -14,8 +14,10 @@ public class ControlleurServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		resp.setContentType("text/html");
-		PrintWriter out = resp.getWriter();
+	  //	PrintWriter out = resp.getWriter();
 		String name = req.getParameter("name");
-		req.getRequestDispatcher("vue.jsp").forward(req, resp);
+		req.setAttribute("model", name);
+		//req.getRequestDispatcher("vue.jsp").forward(req, resp);
+		resp.sendRedirect("vue.jsp?name="+name);
 	}
 }
